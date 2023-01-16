@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <script src="node_modules/lena.js/dist/browser.js"></script>
+    <title>Proscesamiento de Imagenes con Lena.js</title>
+
+</head>
+
+<body>
+    <img id="imagen lena original" src="Lena.jpg"/>
+    <canvas id="imagen lena filtrada"></canvas>
+
+    <script type="text/javascript">
+
+        var ImagenOriginal = document.getElementById("imagen lena original");
+        
+        var ImagenFiltrada = document.getElementById("imagen lena filtrada");
+
+        var Filtro = LenaJS["red"];
+
+        LenaJS.filterImage(ImagenFiltrada, Filtro, ImagenOriginal);
+        
+    </script>
+      
+</body>
+
+</html>
