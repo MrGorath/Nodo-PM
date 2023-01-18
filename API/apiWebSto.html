@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>API</title>
+
+</head>
+
+<body onload="getLastUser()">
+    <h1>Bievenido <span id="user"></span></h1>
+    <form onsubmit="login()">
+        <input id="username" type="text" value="" size="30" />
+        <input type="submit" />
+    </form>
+    <script>
+        function getLastUser() {
+            var user = localStorage.getItem("username");
+            document.getElementById("user").innerText = user;
+        }
+        function login() {
+            var username = document.getElementById("username").value;
+            localStorage.setItem("username", username);
+        }
+    </script>
+</body>
+
+</html>
