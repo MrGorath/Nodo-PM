@@ -11,21 +11,142 @@
 </head>
 
 <body>
-    <img id="imagen lena original" src="Lena.jpg"/>
+
+    <h3>FILTROS:</h3>
+    <ul>
+        <li>GRAYSCALE (1)</li>
+        <li>SEPIA (2)</li>
+        <li>THRESHOLDING-128 (3)</li>
+        <li>INVERT (4)</li>
+        <li>SATURATION (5)</li>
+        <li>RED (6)</li>
+        <li>GREEN (7)</li>
+        <li>BLUE (8)</li>
+        <li>MIRROR (9)</li>
+        <li>ROBERTS (10)</li>
+        <li>SHARPEN (11)</li>
+        <li>SOBEL Y (12)</li>
+        <li>SOBEL X (13)</li>
+        <li>HIGHPASS (14)</li>
+        <li>LOWPASS(3X3) (15)</li>
+        <li>LOWPASS(5X5) (16)</li>
+        <li>LAPLACIAN (17)</li>
+        <li>GAUSIAN (18)</li>
+        <li>BIGGAUSSIN (19)</li>
+        <li>PREWITT Y (20)</li>
+        <li>PREWITT X (21)</li>
+        <li>CANNY (22)</li>
+    </ul>
+
+    <label for="txtFiltro">Introducir el número de filtro que quiere usar:</label>
+    <input type="text" value="0" id="txtFiltro" name="txtFiltro">
+    <input type="button" value="Cambiar Filtro" name="btnFiltro" onclick="cambiarFiltro(document.getElementById('txtFiltro').value)">
+    <br>
+    <br>
+    <img id="imagen lena original" src="Lena.jpg" />
     <canvas id="imagen lena filtrada"></canvas>
 
     <script type="text/javascript">
 
-        var ImagenOriginal = document.getElementById("imagen lena original");
-        
-        var ImagenFiltrada = document.getElementById("imagen lena filtrada");
+        function cambiarFiltro(cambioDeFiltro) {
 
-        var Filtro = LenaJS["red"];
+            var ImagenOriginal = document.getElementById("imagen lena original");
+            var ImagenFiltrada = document.getElementById("imagen lena filtrada");
 
-        LenaJS.filterImage(ImagenFiltrada, Filtro, ImagenOriginal);
-        
+            var Filtro1 = LenaJS["grayscale"];
+            var Filtro2 = LenaJS["sepia"];
+            var Filtro3 = LenaJS["thresholding"];
+            var Filtro4 = LenaJS["invert"];
+            var Filtro5 = LenaJS["saturation"];
+            var Filtro6 = LenaJS["red"];
+            var Filtro7 = LenaJS["green"];
+            var Filtro8 = LenaJS["blue"];
+            var Filtro9 = LenaJS["mirror"];
+            var Filtro10 = LenaJS["roberts"];
+            var Filtro11 = LenaJS["sharpen"];
+            var Filtro12 = LenaJS["sobelVertical"];
+            var Filtro13 = LenaJS["sobelHorizontal"];
+            var Filtro14 = LenaJS["highpass"];
+            var Filtro15 = LenaJS["lowpass3"];
+            var Filtro16 = LenaJS["lowpass5"];
+            var Filtro17 = LenaJS["laplacian"];
+            var Filtro18 = LenaJS["gaussian"];
+            var Filtro19 = LenaJS["bigGaussian"];
+            var Filtro20 = LenaJS["prewittVertical"];
+            var Filtro21 = LenaJS["prewittHorizontal"];
+            var Filtro22 = LenaJS["canny"];
+
+            if (cambioDeFiltro == 1) {                
+                LenaJS.filterImage(ImagenFiltrada, Filtro1, ImagenOriginal)
+
+            } else if (cambioDeFiltro == 2) {
+                LenaJS.filterImage(ImagenFiltrada, Filtro2, ImagenOriginal)
+
+            } else if (cambioDeFiltro == 3) {
+                LenaJS.filterImage(ImagenFiltrada, Filtro3, ImagenOriginal)
+
+            } else if (cambioDeFiltro == 4) {
+                LenaJS.filterImage(ImagenFiltrada, Filtro4, ImagenOriginal)
+
+            } else if (cambioDeFiltro == 5) {
+                LenaJS.filterImage(ImagenFiltrada, Filtro5, ImagenOriginal)
+
+            } else if (cambioDeFiltro == 6) {
+                LenaJS.filterImage(ImagenFiltrada, Filtro6, ImagenOriginal)
+
+            } else if (cambioDeFiltro == 7) {
+                LenaJS.filterImage(ImagenFiltrada, Filtro7, ImagenOriginal)
+
+            } else if (cambioDeFiltro == 8) {
+                LenaJS.filterImage(ImagenFiltrada, Filtro8, ImagenOriginal)
+
+            } else if (cambioDeFiltro == 9) {
+                LenaJS.filterImage(ImagenFiltrada, Filtro9, ImagenOriginal)
+
+            } else if (cambioDeFiltro == 10) {
+                LenaJS.filterImage(ImagenFiltrada, Filtro10, ImagenOriginal)
+
+            } else if (cambioDeFiltro == 11) {
+                LenaJS.filterImage(ImagenFiltrada, Filtro11, ImagenOriginal)
+
+            } else if (cambioDeFiltro == 12) {
+                LenaJS.filterImage(ImagenFiltrada, Filtro12, ImagenOriginal)
+
+            } else if (cambioDeFiltro == 13) {
+                LenaJS.filterImage(ImagenFiltrada, Filtro13, ImagenOriginal)
+
+            } else if (cambioDeFiltro == 14) {
+                LenaJS.filterImage(ImagenFiltrada, Filtro14, ImagenOriginal)
+
+            } else if (cambioDeFiltro == 15) {
+                LenaJS.filterImage(ImagenFiltrada, Filtro15, ImagenOriginal)
+
+            } else if (cambioDeFiltro == 16) {
+                LenaJS.filterImage(ImagenFiltrada, Filtro16, ImagenOriginal)
+
+            } else if (cambioDeFiltro == 17) {
+                LenaJS.filterImage(ImagenFiltrada, Filtro17), ImagenOriginal
+
+            } else if (cambioDeFiltro == 18) {
+                LenaJS.filterImage(ImagenFiltrada, Filtro18, ImagenOriginal)
+
+            } else if (cambioDeFiltro == 19) {
+                LenaJS.filterImage(ImagenFiltrada, Filtro19, ImagenOriginal)
+
+            } else if (cambioDeFiltro == 20) {
+                LenaJS.filterImage(ImagenFiltrada, Filtro20, ImagenOriginal)
+
+            } else if (cambioDeFiltro == 21) {
+                LenaJS.filterImage(ImagenFiltrada, Filtro21, ImagenOriginal)
+
+            } else if (cambioDeFiltro == 22) {
+                LenaJS.filterImage(ImagenFiltrada, Filtro22, ImagenOriginal)
+
+            }
+        }
+
     </script>
-      
+
 </body>
 
 </html>
